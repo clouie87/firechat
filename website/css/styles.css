@@ -38,15 +38,15 @@ header {
   min-height: 150px;
   width: 100%;
   color: white;
-  background-color: #ff8b00;
+  background-color: limegreen;
 }
 
 .header-title {
-  background-color: #d7690d;
+  background-color: forestgreen;
 }
 
 .header-content {
-  background-color: #ff8b00;
+  background-color: limegreen;
 }
 
 .header-links {
@@ -128,7 +128,7 @@ header {
 -------------------------------------------------- */
 #firechat-container {
   height: 475px;
-  max-width: 325px;
+  /*max-width: 325px;*/
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #fff;

@@ -17,9 +17,9 @@
 </head>
 
 <body class="home-page">
-  <a href="https://github.com/firebase/firechat" target="_blank">
-    <img class="fork-on-github" src="images/fork-on-github-white.png" alt="Fork me on GitHub">
-  </a>
+  <!--<a href="https://github.com/firebase/firechat" target="_blank">-->
+    <!--<img class="fork-on-github" src="images/fork-on-github-white.png" alt="Fork me on GitHub">-->
+  <!--</a>-->
 
   <header id="top-content">
     <div class="header-title">
@@ -29,7 +29,7 @@
           <a href="#" class="selected">Home</a>
           <a href="./docs/">Documentation</a>
         </div>
-        <div id="home-title"><span class="strong">Fire</span><span class="satisfy">chat</span></div>
+        <div id="home-title"><span class="strong">UIT</span><span class="satisfy">chat</span></div>
         <div id="home-subtitle">Open-source real-time chat, built on Firebase</div>
       </div>
     </div>
@@ -37,14 +37,14 @@
     <div class="header-content">
       <div class="container text-center">
         <div class="row">
-          <div class="span12">
-            <a href="https://github.com/firebase/firechat" target="_blank">
-              <button id="home-download-on-github" class="btn btn-large" type="button"><span class="satisfy">Download on GitHub</span></button>
-            </a>
-          </div>
+          <!--<div class="span12">-->
+            <!--<a href="https://github.com/firebase/firechat" target="_blank">-->
+              <!--<button id="home-download-on-github" class="btn btn-large" type="button"><span class="satisfy">Download on GitHub</span></button>-->
+            <!--</a>-->
+          <!--</div>-->
         </div>
         <div class="row">
-          <div class="span6 offset3">
+          <div class="span12">
             <div id="firechat-container" class="clearfix"></div>
             <div id="user-info">
               Logged in as <span id="user-name">.</span>
@@ -52,6 +52,7 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
   </header>
 
@@ -77,67 +78,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="span12">
-          <div class="bottom-title">Real-time chat with no server code.</div>
-          <div class="bottom-content">
-            <div class="row">
-              <div class="span5 offset1">
-                <h3>What is Firechat?</h3>
-                <p class="answer">
-                  Firechat is an open-source, real-time chat widget built on Firebase. It offers fully secure multi-user, multi-room chat with flexible authentication, moderator features, user presence and search, private messaging, chat invitations, and more.
-                </p>
-              </div>
-              <div class="span5">
-                <h3>Which technologies does Firechat use?</h3>
-                <p class="answer">
-                  The core data layer under Firechat uses <a href="/?utm_source=landing&utm_medium=site&utm_campaign=firechat" target="_blank">Firebase</a> for real-time data synchronization and persistence.
-                  <br/><br/>
-                  The default interface uses <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://underscorejs.org/" target="_blank">Underscore.js</a>, and <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>. Icons by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a>. Build and compilation managed with <a href="http://gruntjs.com/" target="_blank">Grunt</a> and code hosted by <a href="https://github.com/" target="_blank">GitHub</a>.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="span5 offset1">
-                <h3>What can I do with Firechat?</h3>
-                <p class="answer">
-                  With Firechat, you get full-featured chat in your application with a few simple script includes. Additionally, Firechat is easy to modify and extend. Based upon it's simple underlying data model and <a href="/?utm_source=landing&utm_medium=site&utm_campaign=firechat" target="_blank">Firebase</a>-powered data synchronization, it's easy to add new features, modify the UI, and customize to fit your specific needs.
-                </p>
-                <p>
-                  If Firechat doesn't currently meet your needs, feel free to fork the repo and tweak the code!
-                </p>
-              </div>
-              <div class="span5">
-                <h3>Who's behind Firechat?</h3>
-                <p class="answer">
-                  Firechat was built by the folks at <a href="/?utm_source=landing&utm_medium=site&utm_campaign=firechat" target="_blank">Firebase</a> in San Francisco, California.
-                  <br/><br/>
-                  Community submissions are encouraged! <a href="https://github.com/firebase/firechat" target="_blank">Star Firechat on GitHub</a> and send a pull request when you're ready to contribute!
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="span5 offset1">
-                <h3>Who's using Firechat?</h3>
-                <p class="answer">
-                  <blockquote>
-                    <img src="images/customer-cbs.png">
-                    <small>CBS <i>Big Brother</i> Live Feeds</small>
-                  </blockquote>
-                </p>
-              </div>
-              <div class="span5 ">
-                <h3>How is Firechat Licensed?</h3>
-                <p class="answer">
-                  Firechat is published under the <a href="http://firebase.mit-license.org/" target="_blank">MIT license</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <footer class="footer">
     <div class="container text-center">
@@ -163,7 +104,10 @@
     <div class="modal-body text-center">
       <p>
         <a id="twitter-signin" href="javascript:login('twitter');">
-          <img id="twitter-signin-btn" src="images/sign-in-with-twitter.png">
+          <img id="twitter-signin-btn" src="images/twitterButton.png">
+        </a>
+        <a id="facebook-signin" href="javascript:login('facebook');">
+          <img id="facebook-signin-btn" src="images/facebookButton.png">
         </a>
       </p>
     </div>
@@ -179,9 +123,11 @@
 
   <!-- Download from https://github.com/firebase/Firechat -->
   <link rel="stylesheet" href="firechat/2.0.0/firechat-default.css" />
-  <script src="firechat/2.0.0/firechat-default.js"></script>
+  <!--<script src="firechat/2.0.0/firechat-default.js"></script>-->
+    <script src="firechat/js/firechat.js"></script>
+    <script src="firechat/js/firechat-ui.js"></script>
   <script>
-    var chatRef = new Firebase('https://firechat-demo.firebaseio.com'),
+    var chatRef = new Firebase('https://uit-chat.firebaseio.com'),
         target = document.getElementById("firechat-container"),
         authModal = $('#auth-modal').modal({ show: false }),
         chat = new FirechatUI(chatRef, target);
@@ -225,6 +171,37 @@
 
   <!-- Twitter / Facebook / Google -->
   <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+    <script>
+      // Create a new Firebase reference, and a new instance of the Login client
+      var chatRef = new Firebase('https://uit-chat.firebaseio.com/chat');
+
+      function login(provider) {
+        chatRef.authWithOAuthPopup(provider , function(error, authData) {
+          if (error) {
+            console.log(error);
+          }
+        });
+      }
+
+      chatRef.onAuth(function(authData) {
+        // Once authenticated, instantiate Firechat with our user id and user name
+        if (authData) {
+          initChat(authData);
+        }
+      });
+    </script>
+
+    <a href='#' onclick='login();'>Login with Twitter</a>
+
+    <script>
+      function initChat(authData) {
+        var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+        chat.setUser(authData.uid, authData[authData.provider].displayName);
+      }
+    </script>
+
+    <div id='firechat-wrapper'></div>
   <div id="fb-root"></div>
   <script>
     // If loaded on GitHub pages, redirect to Firebase-hosted version.

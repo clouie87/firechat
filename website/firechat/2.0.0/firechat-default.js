@@ -34,7 +34,7 @@ this["FirechatDefaultTemplates"]["templates/room-user-list-item.html"] = functio
 
 this["FirechatDefaultTemplates"]["templates/room-user-search-list-item.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape, __j = Array.prototype.join;function print() { __p += __j.call(arguments, '') }with (obj) {__p += '<li data-user-id=\'' +__e( id ) +'\' data-user-name=\'' +__e( name ) +'\'>\n<a href=\'#!\' class=\'clearfix\'>\n'; if (disableActions) { ;__p += '\n<span class=\'left fourfifth clipped\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</span>\n'; } else { ;__p += '\n<span data-event=\'firechat-user-invite\' class=\'left fourfifth clipped\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</span>\n<span data-event=\'firechat-user-invite\' class=\'icon plus right\' title=\'Invite to Room\'>+</span>\n'; } ;__p += '\n</a>\n</li>';}return __p};
 
-this["FirechatDefaultTemplates"]["templates/tab-content.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'' +__e( id ) +'\' data-room-id=\'' +__e( id ) +'\' class=\'tab-pane\'>\n<div class=\'tab-pane-menu clearfix\'><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-room-list-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\' data-target=\'firechat-room-user-list-' +__e( id ) +'\'>\n<span class=\'icon user-group\'></span>\nIn Room\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<ul id=\'firechat-room-user-list-' +__e( id ) +'\' class=\'full\'></ul>\n</div>\n</div><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-search-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon plus\'>+</span>\nInvite\n<span class=\'caret\'></span>\n</a><div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-room-user-search-' +__e( id ) +'\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'clearfix\'><span class="quarter"></span>\n<!--\n<button type=\'button\' class=\'btn third disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-prev\' disabled=disabled>Prev</button>\n-->\n<button type=\'button\' class=\'btn half disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-next\'  disabled=disabled>Next</button>\n</div>\n</div>\n</div>\n</div><a href=\'#!\' data-event=\'firechat-close-tab\' class=\'icon close right\' style=\'15px 5px\' title=\'Leave Room\'></a></div><div class=\'clearfix\'>\n<div id=\'firechat-messages' +__e( id ) +'\' class=\'chat\'></div>\n</div><div class=\'clearfix\'>\n<label>Your message:</label>\n<textarea id=\'textarea' +__e( id ) +'\' placeholder=\'Type your message here...\'></textarea>\n</div>\n</div>';}return __p};
+this["FirechatDefaultTemplates"]["templates/tab-content.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'' +__e( id ) +'\' data-room-id=\'' +__e( id ) +'\' class=\'tab-pane\'>\n<div class=\'tab-pane-menu clearfix\'><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-room-list-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\' data-target=\'firechat-room-user-list-' +__e( id ) +'\'>\n<span class=\'icon user-group\'></span>\n Matty!!!! \n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<ul id=\'firechat-room-user-list-' +__e( id ) +'\' class=\'full\'></ul>\n</div>\n</div><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-search-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon plus\'>+</span>\nInvite\n<span class=\'caret\'></span>\n</a><div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-room-user-search-' +__e( id ) +'\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'clearfix\'><span class="quarter"></span>\n<!--\n<button type=\'button\' class=\'btn third disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-prev\' disabled=disabled>Prev</button>\n-->\n<button type=\'button\' class=\'btn half disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-next\'  disabled=disabled>Next</button>\n</div>\n</div>\n</div>\n</div><a href=\'#!\' data-event=\'firechat-close-tab\' class=\'icon close right\' style=\'15px 5px\' title=\'Leave Room\'></a></div><div class=\'clearfix\'>\n<div id=\'firechat-messages' +__e( id ) +'\' class=\'chat\'></div>\n</div><div class=\'clearfix\'>\n<label>Your message:</label>\n<textarea id=\'textarea' +__e( id ) +'\' placeholder=\'Type your message here...\'></textarea>\n</div>\n</div>';}return __p};
 
 this["FirechatDefaultTemplates"]["templates/tab-menu-item.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<li data-room-id=\'' +__e( id ) +'\'>\n<a href=\'#' +__e( id ) +'\' data-toggle=\'firechat-tab\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</a>\n</li>';}return __p};
 
@@ -47,15 +47,15 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
       if (typeof this !== "function") {
         throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
       }
-  
-      var aArgs = Array.prototype.slice.call(arguments, 1), 
-          fToBind = this, 
+
+      var aArgs = Array.prototype.slice.call(arguments, 1),
+          fToBind = this,
           fNOP = function() {},
           fBound = function() {
             return fToBind.apply(this instanceof fNOP && oThis ? this : oThis,
                                  aArgs.concat(Array.prototype.slice.call(arguments)));
           };
-   
+
       fNOP.prototype = this.prototype;
       fBound.prototype = new fNOP();
       return fBound;
@@ -63,14 +63,14 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
   }
 
   // Shim for Object.keys(...) - (Required by IE < 9, FF < 4)
-  Object.keys = Object.keys || function(oObj) {  
-    var result = [];  
-    for (var name in oObj) {  
+  Object.keys = Object.keys || function(oObj) {
+    var result = [];
+    for (var name in oObj) {
       if (oObj.hasOwnProperty(name)) {
-        result.push(name);  
+        result.push(name);
       }
-    }  
-    return result;  
+    }
+    return result;
   };
 
 })();

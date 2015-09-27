@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       },
       production: {
         options: {
-          yuicompress: true
+          yuicompress: {}
         },
         files: {
           "dist/firechat.min.css": "src/less/styles.less"

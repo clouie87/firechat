@@ -10,15 +10,14 @@
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 
     <!-- Firechat -->
-    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css" />
-    <!--<script src="https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js"></script>-->
+    <link rel="stylesheet" href="dist/firechat.min.css" />
+    <script src="dist/firechat.min.js"></script>
 
-    <script src="../../dist/firechat.js"> </script>
     <!-- Custom CSS -->
     <style>
       #firechat-wrapper {
         height: 475px;
-        max-width: 325px;
+        /*max-width: 325px;*/
         padding: 10px;
         border: 1px solid #ccc;
         background-color: #fff;
@@ -50,7 +49,7 @@
   <body>
     <div id="firechat-wrapper"></div>
     <script type="text/javascript">
-      var chatRef = new Firebase("https://firechat-demo.firebaseio.com");
+      var chatRef = new Firebase("https://uit-chat.firebaseio.com");
       var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
       chatRef.onAuth(function(authData) {
         if (authData) {
