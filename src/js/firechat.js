@@ -536,6 +536,8 @@
 
     self._roomRef.once('value', function(snapshot) {
       cb(snapshot.val());
+      var roomName= snapshot.val();
+      console.log("this is", roomName, roomName.name);
     });
   };
 

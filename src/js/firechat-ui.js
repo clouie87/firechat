@@ -380,25 +380,23 @@
   FirechatUI.prototype._bindForRoomList = function() {
     var self = this;
 
-    $('#firechat-btn-rooms').bind('click', function() {
-      if ($(this).parent().hasClass('open')) {
-        return;
-      }
-
+    //$('#firechat-btn-rooms').bind('click', function() {
+    $(document).ready(function() {
+      console.log("Document is ready");
       var $this = $(this),
-          template = FirechatDefaultTemplates["templates/room-list-item.html"],
-          selectRoomListItem = function() {
-            var parent = $(this).parent(),
-                roomId = parent.data('room-id'),
-                roomName = parent.data('room-name');
+        template = FirechatDefaultTemplates["templates/room-list-item.html"],
+        selectRoomListItem = function() {
+          var parent = $(this).parent(),
+            roomId = parent.data('room-id'),
+            roomName = parent.data('room-name');
 
-            if (self.$messages[roomId]) {
-              self.focusTab(roomId);
-            } else {
-              self._chat.enterRoom(roomId, roomName);
-            }
-            return false;
-          };
+          if (self.$messages[roomId]) {
+            self.focusTab(roomId);
+          } else {
+            self._chat.enterRoom(roomId, roomName);
+          }
+          return false;
+        };
 
       self._chat.getRoomList(function(rooms) {
         self.$roomList.empty();
@@ -409,9 +407,18 @@
           var $roomItem = $(template(room));
           $roomItem.children('a').bind('click', selectRoomListItem);
           self.$roomList.append($roomItem.toggle(true));
+          console.log('the rooms are:', room.name);
         }
       });
-    });
+
+      });
+
+      if ($(this).parent().hasClass('open')) {
+        return;
+      }
+
+
+    //});
   };
 
   /**

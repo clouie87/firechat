@@ -5,12 +5,17 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+
 
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 
     <!-- Firechat -->
     <link rel="stylesheet" href="dist/firechat.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
+
     <script src="dist/firechat.min.js"></script>
 
     <!-- Custom CSS -->
@@ -47,21 +52,101 @@
       4. Update the room id for auto-entry with a public room you have created
    -->
   <body>
-    <div id="firechat-wrapper"></div>
+    <div id="firechat-wrapper">
+
+
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div id="firechat-container" class="clearfix"></div>
+        <div id="user-info">
+          Logged in as <span id="user-name">.</span>
+          <a href="javascript:logout();">Logout</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="header-content">
+      <div class="container text-center">
+        <div id="auth-modal" class="modal hide fade" tabindex="-1" role="dialog">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 id="myModalLabel">Authenticate to continue</h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>
+              <a id="twitter-signin" href="javascript:login('twitter');">
+                <img id="twitter-signin-btn" src="assets/img/twitterButton.png">
+              </a>
+              <a id="facebook-signin" href="javascript:login('facebook');">
+                <img id="facebook-signin-btn" src="assets/img/twitterButton.png">
+              </a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script type="text/javascript">
       var chatRef = new Firebase("https://uit-chat.firebaseio.com");
-      var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
+      var target = document.getElementById("firechat-wrapper");
+      var authModal = $('#auth-modal').modal( {show : false} );
+      var chat = new FirechatUI(chatRef, target);
+
+      chat.on('auth-required', function() {
+        authModal.modal('show');
+        return false;
+      });
+
       chatRef.onAuth(function(authData) {
         if (authData) {
-          chat.setUser(authData.uid, "Anonymous" + authData.uid.substr(10, 8));
+          var userId = authData.uid,
+            username = authData[authData.provider].displayName;
+
+          chat.setUser(userId, username);
+          $('#user-name').text(username);
+          $('#user-info').show();
+          setTimeout(function() {
+            chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+          }, 500);
         } else {
-          chatRef.authAnonymously(function(error, authData) {
-            if (error) {
-              console.log(error);
-            }
-          });
+          $('#user-info').hide();
+          chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
         }
       });
+
+      function login(provider) {
+        authModal.modal('hide');
+        chatRef.authWithOAuthPopup(provider, function(error, authData) {
+          if (error) {
+            console.log(error);
+          }
+        });
+      }
+
+      function logout() {
+        chatRef.unauth();
+        location.reload();
+      }
+
+
+//      chatRef.onAuth(function(authData) {
+//        if (authData) {
+//          chat.setUser(authData.uid, "Anonymous" + authData.uid.substr(10, 8));
+//        } else {
+//          chatRef.authAnonymously(function(error, authData) {
+//            if (error) {
+//              console.log(error);
+//            }
+//          });
+//        }
+//      });
     </script>
   </body>
 </html>
